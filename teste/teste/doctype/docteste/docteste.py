@@ -7,7 +7,6 @@ from frappe.model.document import Document
 class Docteste(Document):
 	try: 
 		parametros = frappe.get_doc('Param', 'DEFAULT')
-		break
 	except DoesNotExistError:
 		print("Oops!  That was no valid number.  Try again...")
 
