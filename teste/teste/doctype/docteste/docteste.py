@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.exceptions import DoesNotExistError
 
 class Docteste(Document):
 	try: 
