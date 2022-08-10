@@ -7,6 +7,8 @@ app_description = "Teste"
 app_email = "teste"
 app_license = "MIT"
 
+fixtures = ["Param"]
+
 # Includes in <head>
 # ------------------
 
