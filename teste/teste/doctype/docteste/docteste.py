@@ -3,11 +3,15 @@
 
 import frappe
 from frappe.model.document import Document
-from frappe.exceptions import DoesNotExistError
+import inspect
 
 class Docteste(Document):
-	try: 
-		parametros = frappe.get_doc('Param', 'DEFAULT')
-	except DoesNotExistError:
-		print("Oops!  That was no valid number.  Try again...")
+	# Este método faz parte da classe Docteste
+	@frappe.whitelist()
+	def metodo_dentro(self):
+		return "Metodo dentro da classe"
 
+# Este método NÃO faz parte da classe Docteste
+@frappe.whitelist()
+def metodo_fora():
+	return "Metodo fora da classe"	
