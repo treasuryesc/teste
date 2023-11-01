@@ -1,1 +1,1 @@
-# teste novo de novo
+__version__ = "1.2"
